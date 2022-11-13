@@ -588,25 +588,18 @@ small-devices-and-up-media-quer
 }
 
 /* form detail */
-.create-detail {
+.create-detail, .show-detail {
     text-align: center;
     font-family: var(--Font_Title);
     font-size: var(--L);
     color: var(--Color_Main);
 }
 
-.create-data {
-    text-align: center;
-    font-family: var(--Font_Text);
-    font-size: var(--M);
-    color: var(--Color_Text);
-}
-
 .section-bg {
     background-color: var(--Color_Light);
 }
 
-.create-form{
+.create-form, .show-data{
     display:flex;
     justify-content: center;
 
@@ -619,7 +612,7 @@ small-devices-and-up-media-quer
     align-items: left;
 }
 
-.create-field{
+.create-field, .show-p{
     padding-bottom: 2vw;
     font-family: var(--Font_Text);
 }

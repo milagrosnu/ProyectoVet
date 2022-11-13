@@ -7,7 +7,10 @@ urlpatterns = [
     #Servicios
     path('services/', ShowServices, name='services'),
     #Crear servicios cargados en bbdd
-    path('services/create-service', CreateService, name='CreateService'),
+    path('services/create-services', CreateService, name='CreateService'),
+    #Detalle de servicios
+    path('services/show-services', GetServices, name='GetService'),
+    #path('services/show-services', GetServices, name='GetServices'),
     #path('services/<str:id>', GetService, name='GetService'),
     #path('services/update-service/<str:id>/', GetService, name='GetService'),
     #path('services/delete-service/<str:id>/', DeleteService, name='DeleteService'),

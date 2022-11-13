@@ -23,7 +23,7 @@ def ShowServices(request):
     context = {'service': service}
     return render(request, 'AppVet/services_mgt.html', context)
  """
-#Cargar servicio
+#Crear servicio
 def CreateService(request):
     if request.method == 'POST':
         s_form = ServicesForm(request.POST)
@@ -35,7 +35,7 @@ def CreateService(request):
                 service_available=data['service_available'],
             )
             service.save()
-            return render(request, 'AppVet/services-mgt.html')
+            return render(request, 'AppVet/services_mgt.html')
         else:
             redirect('services')
     e_form = ServicesForm()
@@ -43,10 +43,12 @@ def CreateService(request):
 
 #Armar lista de servicios
 def GetServices(request):
+    return render(request, 'AppVet/services_mgt.html')
+
+def GetServices(request):
     services = Services.objects.all()
     context = {'services' : services}
     return render(request, 'AppVet/services_mgt.html', context)
-
 
 #Actualizar servicio
 def UpdateService(request, id):
