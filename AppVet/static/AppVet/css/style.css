@@ -593,6 +593,8 @@ small-devices-and-up-media-quer
     font-family: var(--Font_Title);
     font-size: var(--L);
     color: var(--Color_Main);
+
+    padding-top: 2vw;
 }
 
 .section-bg {
@@ -604,11 +606,6 @@ small-devices-and-up-media-quer
     justify-content: center;
 
     padding-top: 2vw;
-}
-
-.show-ol{
-    border: 1px solid var(--Color_Text);
-    padding-left: 2vw;
 }
 
 .create-input{
@@ -624,4 +621,12 @@ small-devices-and-up-media-quer
 .form-btn-dark{
     margin-bottom: 2vw;
     margin-left: 9vw;
+}
+
+.show-ol{
+    border: solid 1px var(--Color_Text);
+    border-radius: 20px;
+    padding: 2vw;
+
+    margin: 1vw;
 }

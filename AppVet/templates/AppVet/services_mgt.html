@@ -39,7 +39,7 @@
                     <p><b>Si se muestra 'False', servicio no disponible.</b></p>
                 </li>
                 <li class="show-p">
-                    <p>Agregado: {{s.add_date}} </p>
+                    <p><b>Agregado:</b> {{s.add_date}} </p>
                 </li>
             </ol>
             {% endfor %}
@@ -52,7 +52,7 @@
         </div>
         <div class="create-form">
             <!-- para crear un servicio y cargar en bbdd -->
-            <form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <form action="" method="POST"> {% csrf_token %}
                 <div class="crear-input">
                     <div class="create-field">
                         <label for="id_service_name"> Nombre del servicio: </label>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="create-field">
                         <label for="id_service_available">Se encuentra disponible el servicio? </label>
-                        <input type="boolean" name="service_available" required id="id_service_available">
+                        <input type="checkbox" name="service_available" required id="id_service_available">
                     </div>
                 </div>
                 <input type="submit" value="Crear" class="form-btn-dark" />

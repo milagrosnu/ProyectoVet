@@ -39,12 +39,9 @@ def CreateService(request):
         else:
             redirect('services')
     e_form = ServicesForm()
-    return render(request, 'AppVet/services_mgt.html', {'form': e_form})
+    return render(request, 'AppVet/services.html', {'form': e_form})
 
 #Armar lista de servicios
-def GetServices(request):
-    return render(request, 'AppVet/services_mgt.html')
-
 def GetServices(request):
     services = Services.objects.all()
     context = {'services' : services}
