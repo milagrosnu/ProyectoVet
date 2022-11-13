@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'core.html' %}
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>Paws Care</title>
+    {% endblock %}
+
+</head>
+
+<body>
+{% block content %}
+    <main class="main-container">
+        <div class="main-flex">
+            <div>
+                <h1 class="main-title">El mejor cuidado para <br> nuestros adorables amigos</h1>
+                <h3 class="main-txt">Registrate para recibir un descuento <br> del <b>10%</b> en tu primer consulta.
+                </h3>
+            </div>
+            <div class="main-buttons">
+                <button class="main-btn-S"><a href="#">Registrarse</a></button>
+                <button class="main-btn-V"><a href="#">Contactanos</a></button>
+            </div>
+            <div class="main-row">
+                <div class="main-icon">
+                    <i class="fa-solid fa-comment-medical"></i>
+                    <h4>Consultas 24hs</h4>
+                </div>
+                <div class="main-icon">
+                    <i class="fa-solid fa-scissors"></i>
+                    <h4>Peluqueria</h4>
+                </div>
+                <div class="main-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <h4>Cirugias</h4>
+                </div>
+            </div>
+        </div>
+        <div class="main-img">
+            <img
+                src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668224244/AppVet/jae-park-7GX5aICb5i4-unsplash_nvpksd.jpg">
+        </div>
+    </main>
+    <section class="section-container">
+        <div class="about-img">
+            <img class="about-hamster"
+                src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668228209/AppVet/silje-roseneng-cMp84C0fPSg-unsplash_aldex0.jpg">
+        </div>
+        <div class="about-flex">
+            <div class="about-left">
+                <h2 class="about-title">SOBRE NOSOTROS</h2>
+                <p> Somos un centro veterinario multidisciplinario que ofrece un amplio rango de servicios, desde
+                    diagnosticos y tratamientos, hasta cirugias de complejidad media para diferentes tipos de mascotas
+                    ya
+                    que contamos con especialistas en mascotas exoticas.</p>
+                <br>
+                <p>Consideramos que es crucial tanto una mascota recuperada y sana, como un duenio satisfecho y a gusto.
+                </p>
+                <br>
+                <p>Ademas contamos con algunos de los mejores productos para nuestros amigos de cuatro patas:
+                <ul class="about-list">
+                    <li>Alimento premium</li>
+                    <li>Juguetes de primera calidad</li>
+                    <li>Todo tipo de accesorios y comodidades para todos</li>
+                </ul>
+                </p>
+            </div>
+            <div class="about-row">
+                <div class="about-info">
+                    <h3>+15</h3>
+                    <h4>Especialistas</h4>
+                </div>
+                <div class="about-info-under">
+                    <h3>+9800</h3>
+                    <h4>Mascotas<br>recuperadas</h4>
+                </div>
+                <div class="about-info">
+                    <h3>24/7</h3>
+                    <h4>Disponibles</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-container">
+        <div>
+            <div class="service-main">
+                <h3 class="service-title">NUESTROS SERVICIOS</h3>
+                <p class="service-subtitle"> Ofrecemos una amplia gama de servicios para tus mascotas, <br> de la mano
+                    de los
+                    mejores profesionales y marcas.</p>
+            </div>
+        </div>
+        <div class="service-info">
+            <div class="service-box">
+                <i class="fa-solid fa-stethoscope"></i>
+                <h4>Consultas</h4>
+                <p>Consultas de urgencia por guardia o con turno previo.</p>
+                <div class="service-shadow">
+                    <a href="{% url 'services' %}">+ info </a>
+                </div>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-user-nurse"></i>
+                <h4>Cirugias</h4>
+                <p>Cirugias de baja y mediana complejidad, con seguimiento.</p>
+                <div class="service-shadow">
+                    <a href="{% url 'services' %}">+ info </a>
+                </div>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-paw"></i>
+                <h4>Peluqueria</h4>
+                <p>Baño, corte y pedicuria. Servicio completo o individual.</p>
+                <div class="service-shadow">
+                    <a href="{% url 'services' %}">+ info </a>
+                </div>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-comments"></i>
+                <h4>Asesoria</h4>
+                <p>Las mejores marcas en alimento, accesorios y juguetes.</p>
+                <div class="service-shadow">
+                    <a href="{% url 'products' %}">+ info </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+</body>
+
+</html>

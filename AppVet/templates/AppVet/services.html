@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'core.html' %}
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>Servicios</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <main class="care-main">
+        <div class="care-container">
+            <h3 class="care-title">WE CARE</h3>
+            <div class="care-text">
+                <div class="care-pet">
+            <p>Recibimos <b>diferentes especies</b> de mascotas. <br> Desde perros y gatos, hasta aves y roedores.<br> Incluso
+                pequenios <b>reptiles!</b></p>
+            </div>
+            <div class="care-exp">
+            <p>Contamos con una basta experiencia con cada uno y sabemos identificar sus
+                necesidades. Desde el nacimiento hasta los posibles cuidados paliativos que puedan
+                necesitar
+                sobre la vejez.</p>
+            </div>
+            </div>
+            <div class="care-img">
+                <img class="hamster"
+                    src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668291369/AppVet/karlijn-prot-5hMlxeWjVCo-unsplash_erdlw0.jpg">
+                <!-- <img class="erizo" src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668283957/AppVet/liudmyla-denysiuk-iJ9o00UeAWk-unsplash_cxvcxt.jpg"> -->
+                <img class="dogcat"
+                    src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668296487/AppVet/krista-mangulsone-9gz3wfHr65U-unsplash_1_ol49tj.jpg">
+                <!--  <img class="rabbit" src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668291247/AppVet/sandy-millar-T-V0104wuU0-unsplash_nkfiai.jpg"> -->
+                <img class="parrot"
+                    src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668291247/AppVet/danny-oates-UTOESxk2Qo4-unsplash_m9whhh.jpg">
+                <img class="gecko"
+                    src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668292168/AppVet/selin-sahin-5DB3cYe7Nxk-unsplash_uzh7zy.jpg">
+            </div>
+        </div>
+        <div class="consult-container">
+            <div class="consult-text">
+                <h4 class="consult-title">Consultas veterinarias</h4>
+                <p>Nuestros veterinarios especialistas les brindaran la mejor atencion y en caso de ser necesario,
+                    realizaremos una derivacion correspondiente.</p>
+                <br>
+                <p>Contamos con un area especializada en <b>diagnostico por imagenes y estudios de rutina.</b></p>
+                <br>
+                <p>Para <b>urgencias</b> contamos con una <b>guardia 24hs</b> en nuestro centro ubicado en: </p>
+                <br>
+                <h4>Av. Ponte de Nira 2398 - CABA</h4>
+                <button class="booking-btn"><a href="{% url 'bookings' %}">Reservar un turno</a></button>
+            </div>
+            <div class="consult-pad">
+                <img class="consult-img" src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668295502/AppVet/helena-lopes-W24o8HA56hk-unsplash_pl2f6j.jpg">
+            </div>
+        </div>
+        <div class="surgery-container">
+            <div class="surgery-text">
+                <h4 class="surgery-title">Cirugias</h4>
+                <p>Realizamos cirugias de baja y mediana complejidad, sobre cualquier especie, tamanio y edad de
+                    mascota. <br>
+                    Para coordinar la fecha del procedimiento, primero deben haber tenido una <b>consulta con el
+                        cirujano</b>
+                    asignado para que pueda evaluar el caso y contar con los <b>estudios pre-quirurgicos aptos.</b></p>
+                <br>
+                <p>Los mismos pueden realizarse dentro de nuestro centro en el area de laboratorio. De ser necesario, se
+                    realizara la derivacion correspondiente.</p>
+                    <button class="booking-btn1"><a href="{% url 'bookings' %}">Reservar un turno</a></button>
+            </div>
+            <div class="surgery-pad">
+                <img class="surgery-img" src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668293664/AppVet/national-cancer-institute-c6rgP7K5rXc-unsplashc_a10syd.jpg">
+            </div>
+
+        </div>
+        <div class="stylist-container">
+            <div class="stylist-text">
+                <h4 class="stylist-title">Peluqueria</h4>
+                <p>Los servicios de peluqueria pueden incluir tanto bano, corte y pedicuria. De ser completo, la
+                    duracion
+                    del turno es de aproximadamente 2.30hs</p>
+                <br>
+                <p>En el caso de ser <b>solo uno</b> de los servicios ofrecidos el turno
+                    cuenta con una duracion de aproximadamente 1 hs.</p>
+                <br>
+                <h4>Los turnos se agendan de una semana para la otra, sin excepcion.</h4>
+                <h4><b>Siempre deben asistir con pretal y correa.</b></h4>
+                <button class="booking-btn"><a href="{% url 'bookings' %}">Reservar un turno</a></button>
+            </div>
+            <div class="stylist-pad">
+                <img class="stylist-img" src="https://res.cloudinary.com/dx05ruehm/image/upload/v1668296665/AppVet/hayffield-l-ZVdZw2p08y4-unsplash_nd5sj1.jpg">
+            </div>
+        </div>
+    </main>
+    {% endblock %}
+</body>
+
+</html>
