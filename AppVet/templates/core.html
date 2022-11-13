@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Skranji&display=swap" rel="stylesheet">
+
+    <script src=" https://kit.fontawesome.com/d9bb24e487.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'AppVet/assets/favicon.ico' %}" />
+    <link href="{% static 'AppVet/css/style.css' %}" rel="stylesheet" />
+
+    {% block title %}
+    <title>Paws Care</title>
+    {% endblock %}
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="nav-header">
+        <nav id="nav" class="nav-main">
+            <div class="nav-title">
+                <h1>Paws Care</h1>
+            </div>
+            <div class="nav-list">
+                <a class="nav-item" href="{% url 'index' %}">Inicio</a>
+                <a class="nav-item" href="{% url 'services' %}">Servicios</a>
+                <a class="nav-item" href="{% url 'products' %}">Productos</a>
+                <button class="nav-btn"> <a href="#">Ingresar</a></button>
+            </div>
+        </nav>
+        <!-- <button id="button-menu" class="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button> -->
+
+    </header>
+    <!-- bloque que cambia -->
+    {% block content %}
+
+    {% endblock %}
+    <!-- footer -->
+    <footer class="footer-flex">
+        <div class="footer-main">
+            <div class="footer-row">
+                <div class="footer-about">
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="#!">Sobre Nosotros</a></li>
+                        <li class="footer-item">⋅</li>
+                        <li class="footer-item"><a href="#!">Contactanos!</a></li>
+                        <li class="footer-item">⋅</li>
+                        <li class="footer-item"><a href="#!">Terms of Use</a></li>
+                        <li class="footer-item">⋅</li>
+                        <li class="footer-item"><a href="#!">Privacy Policy</a></li>
+                    </ul>
+                    <p class="copyright">&copy; Paws Care 2022. All Rights Reserved.</p>
+                </div>
+                <div class="footer-row">
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main-test.js"></script>
+</body>
+
+</html>
