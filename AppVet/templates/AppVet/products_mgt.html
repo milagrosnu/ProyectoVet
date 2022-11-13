@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'core.html' %}
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>Productos</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <!-- muestro servicios cargados -->
+    <main>
+        <div class="service-detail">
+            <h2>Detalle de los productos cargados</h2>
+        </div>
+        <div class="service-data">
+            {% for service in services%}
+            <ol>
+                <li>
+                    <p>ID del producto: {{service.pk}}</p>
+                </li>
+                <li>
+                    <p>Nombre del producto: {{service.service_name}}</p>
+                </li>
+                <li>
+                    <p>Stock disponible: {{service.service_prof}}</p>
+                </li>
+                <li>
+                    <p>Imagen del producto:{{service.service_day}}</p>
+                </li>
+                <li>
+                    <p>Agregado: {{service.add_date}} </p>
+                </li>
+                <li>
+                    <p>Modificado: {{service.last_update}}</p>
+                </li>
+            </ol>
+            {% endfor %}
+        </div>
+    </main>
+    <!-- una vez logueado con admin, crea, actualiza o elimina servicio con form -->
+    <section class="section-bg">
+        <div class="service-detail">
+            <h2>Crear servicio</h2>
+        </div>
+        <div>
+            <!-- para crear un servicio y cargar en bbdd -->
+            <form action="" method="POST"> {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="service-detail">
+            <h2>Borrar servicio</h2>
+        </div>
+        <div>
+            <!-- para borrar un servicio en bbdd -->
+        </div>
+    </section>
+    <section class="section-bg">
+        <div class="service-detail">
+            <h2>Actualizar servicio</h2>
+        </div>
+        <div>
+            <!-- para actualizar un servicio y cargar en bbdd -->
+        </div>
+    </section>
+    {% block content %}
+</body>
+
+</html>
