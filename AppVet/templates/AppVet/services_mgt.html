@@ -17,29 +17,29 @@
     {% block content %}
     <!-- muestro servicios cargados -->
     <main>
-        <div class="service-detail">
+        <div class="show-detail">
             <h2>Detalle de los servicios cargados</h2>
         </div>
-        <div class="service-data">
-            {% for service in services%}
-            <ol>
-                <li>
-                    <p>ID de servicio: {{service.pk}}</p>
+        <div class="show-data">
+            {% for s in services%}
+            <ol class="show-ol">
+                <li class="show-p">
+                    <p><b>ID de servicio:</b> {{s.pk}}</p>
                 </li>
-                <li>
-                    <p>Nombre del servicio: {{service.service_name}}</p>
+                <li class="show-p">
+                    <p><b>Nombre del servicio:</b> {{s.service_name}}</p>
                 </li>
-                <li>
-                    <p>Nombre del profesional a cargo: {{service.service_prof}}</p>
+                <li class="show-p">
+                    <p><b>Nombre del profesional a cargo:</b> {{s.service_prof}}</p>
                 </li>
-                <li>
-                    <p>Dias disponibles para coordinar turnos:{{service.service_day}}</p>
+                <li class="show-p">
+                    <p><b>Servicio disponible?: </b> {{s.service_available}}</p>
+                    <br>
+                    <p><b>Si se muestra 'True', servicio disponible.</b></p>
+                    <p><b>Si se muestra 'False', servicio no disponible.</b></p>
                 </li>
-                <li>
-                    <p>Agregado: {{service.add_date}} </p>
-                </li>
-                <li>
-                    <p>Modificado: {{service.last_update}}</p>
+                <li class="show-p">
+                    <p>Agregado: {{s.add_date}} </p>
                 </li>
             </ol>
             {% endfor %}

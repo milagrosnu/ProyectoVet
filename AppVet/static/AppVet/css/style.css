@@ -606,6 +606,11 @@ small-devices-and-up-media-quer
     padding-top: 2vw;
 }
 
+.show-ol{
+    border: 1px solid var(--Color_Text);
+    padding-left: 2vw;
+}
+
 .create-input{
     display:flex;
     flex-direction: column;
