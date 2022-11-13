@@ -47,16 +47,27 @@
     </main>
     <!-- una vez logueado con admin, crea, actualiza o elimina servicio con form -->
     <section class="section-bg">
-        <div class="service-detail">
+        <div class="create-detail">
             <h2>Crear servicio</h2>
         </div>
-        <div>
+        <div class="create-form">
             <!-- para crear un servicio y cargar en bbdd -->
-            <form action="" method="POST"> {% csrf_token %}
-                <table>
-                    {{form.as_p}}
-                </table>
-                <input type="submit" value="Guardar" class="form-btn-dark" />
+            <form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                <div class="crear-input">
+                    <div class="create-field">
+                        <label for="id_service_name"> Nombre del servicio: </label>
+                        <input type="text" name="service_name" maxlength="50" required id="id_service_name">
+                    </div>
+                    <div class="create-field">
+                        <label for="id_service_prof"> Nombre del profesional a cargo: </label>
+                        <input type="text" name="service_prof" maxlength="50" required id="id_service_prof">
+                    </div>
+                    <div class="create-field">
+                        <label for="id_service_available">Se encuentra disponible el servicio? </label>
+                        <input type="boolean" name="service_available" required id="id_service_available">
+                    </div>
+                </div>
+                <input type="submit" value="Crear" class="form-btn-dark" />
             </form>
         </div>
     </section>

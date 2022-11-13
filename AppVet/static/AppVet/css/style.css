@@ -587,15 +587,15 @@ small-devices-and-up-media-quer
     padding: 1vw 4vw 1vw 4vw;
 }
 
-/* service detail */
-.service-detail {
+/* form detail */
+.create-detail {
     text-align: center;
     font-family: var(--Font_Title);
     font-size: var(--L);
     color: var(--Color_Main);
 }
 
-.service-data {
+.create-data {
     text-align: center;
     font-family: var(--Font_Text);
     font-size: var(--M);
@@ -604,4 +604,26 @@ small-devices-and-up-media-quer
 
 .section-bg {
     background-color: var(--Color_Light);
+}
+
+.create-form{
+    display:flex;
+    justify-content: center;
+
+    padding-top: 2vw;
+}
+
+.create-input{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.create-field{
+    padding-bottom: 2vw;
+    font-family: var(--Font_Text);
+}
+.form-btn-dark{
+    margin-bottom: 2vw;
+    margin-left: 9vw;
 }

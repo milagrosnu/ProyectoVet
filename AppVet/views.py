@@ -32,8 +32,7 @@ def CreateService(request):
             service = Services(
                 service_name=data['service_name'],
                 service_prof=data['service_prof'],
-                service_day=data['service_day'],
-                service_time=data['service_time'],
+                service_available=data['service_available'],
             )
             service.save()
             return render(request, 'AppVet/services-mgt.html')

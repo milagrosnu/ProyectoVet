@@ -5,8 +5,7 @@ from django.db import models
 class Services(models.Model):
     service_name = models.CharField(max_length=50)
     service_prof = models.CharField(max_length=50)
-    service_day = models.DateField()
-    service_time = models.TimeField()
+    service_available = models.BooleanField(default=True)
 
     add_date = models.DateTimeField(auto_now_add=True)
 

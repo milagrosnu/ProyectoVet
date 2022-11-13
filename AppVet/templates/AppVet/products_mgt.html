@@ -48,15 +48,26 @@
     <!-- una vez logueado con admin, crea, actualiza o elimina servicio con form -->
     <section class="section-bg">
         <div class="service-detail">
-            <h2>Crear servicio</h2>
+            <h2>Crear producto</h2>
         </div>
-        <div>
+        <div class="service-form">
             <!-- para crear un servicio y cargar en bbdd -->
-            <form action="" method="POST"> {% csrf_token %}
-                <table>
-                    {{ form.as_table }}
-                </table>
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+            <form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                <div class="service-input">
+                    <div class="service-field">
+                        <label for="id_service_name"> Nombre del servicio: </label>
+                        <input type="text" name="service_name" maxlength="50" required id="id_service_name">
+                    </div>
+                    <div class="service-field">
+                        <label for="id_service_prof"> Nombre del profesional a cargo: </label>
+                        <input type="text" name="service_prof" maxlength="50" required id="id_service_prof">
+                    </div>
+                    <div class="service-field">
+                        <label for="id_service_available">Se encuentra disponible el servicio? </label>
+                        <input type="boolean" name="service_available" required id="id_service_available">
+                    </div>
+                </div>
+                <input type="submit" value="Crear" class="form-btn-dark" />
             </form>
         </div>
     </section>
@@ -78,5 +89,10 @@
     </section>
     {% block content %}
 </body>
-
+<form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+    <table class="service-table">
+        {{form.as_p}}
+    </table>
+    <input type="submit" value="Guardar" class="form-btn-dark" />
+</form>
 </html>
