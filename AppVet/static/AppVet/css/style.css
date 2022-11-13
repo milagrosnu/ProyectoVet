@@ -227,7 +227,7 @@ small-devices-and-up-media-quer
 
 .main-btn-V,
 .booking-btn1,
-.form-btn-light{
+.form-btn-light {
     background-color: var(--Color_Light);
 
     border: 1px solid var(--Color_Text);
@@ -323,7 +323,8 @@ small-devices-and-up-media-quer
 }
 
 .about-title,
-.service-title {
+.service-title,
+.care-title {
     font-family: var(--Font_Title);
     font-size: var(--L);
 
@@ -381,7 +382,7 @@ small-devices-and-up-media-quer
     margin-bottom: 100vw;
 }
 
-.service-flex{
+.service-flex {
     display: flex;
 }
 
@@ -496,7 +497,7 @@ small-devices-and-up-media-quer
 }
 
 .care-text {
-    display:flex;
+    display: flex;
 
     font-family: var(--Font_Text);
 
@@ -505,10 +506,11 @@ small-devices-and-up-media-quer
     margin-left: 8vw;
 }
 
-.care-pet{
-    width:50%;
+.care-pet {
+    width: 50%;
 }
-.care-exp{
+
+.care-exp {
     margin-left: 2vw;
     width: 50%;
 }
@@ -558,14 +560,15 @@ small-devices-and-up-media-quer
     padding-right: 5vw;
 }
 
-.booking-btn, .booking-btn1{
+.booking-btn,
+.booking-btn1 {
     margin-top: 2vw;
     margin-left: 3vw;
 }
 
-.consult-pad, 
+.consult-pad,
 .surgery-pad,
-.stylist-pad{
+.stylist-pad {
     margin-left: 12vw;
 }
 
@@ -579,25 +582,26 @@ small-devices-and-up-media-quer
     border-top-right-radius: 60px;
 }
 
-.booking-btn, .form-btn-dark {
+.booking-btn,
+.form-btn-dark {
     padding: 1vw 4vw 1vw 4vw;
 }
 
 /* service detail */
-.service-detail{
+.service-detail {
     text-align: center;
     font-family: var(--Font_Title);
     font-size: var(--L);
-    color:var(--Color_Main);
+    color: var(--Color_Main);
 }
 
-.service-data{
+.service-data {
     text-align: center;
     font-family: var(--Font_Text);
     font-size: var(--M);
-    color:var(--Color_Text);
+    color: var(--Color_Text);
 }
 
-.section-bg{
+.section-bg {
     background-color: var(--Color_Light);
 }
