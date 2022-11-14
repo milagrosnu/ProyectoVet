@@ -12,4 +12,45 @@
     <title>Servicios</title>
     {% endblock %}
 </head>
-<h4>hola creacr</h4>
+{% block content %}
+    <!-- crear servicio-->
+    <main class="main-bg">
+        <div class="create-detail">
+            <h2>Crear servicio</h2>
+        </div>
+        <div class="create-form">
+            <!-- para crear un servicio y cargar en bbdd -->
+            <form action="" method="POST"> {% csrf_token %}
+                <div class="crear-input">
+                    <div class="create-field">
+                        <label for="id_service_name"> Nombre del servicio: </label>
+                        <input type="text" name="service_name" maxlength="50" required id="id_service_name">
+                    </div>
+                    <div class="create-field">
+                        <label for="id_service_prof"> Nombre del profesional a cargo: </label>
+                        <input type="text" name="service_prof" maxlength="50" required id="id_service_prof">
+                    </div>
+                    <div class="create-field">
+                        <label for="id_service_available">Se encuentra disponible el servicio? </label>
+                        <input type="checkbox" name="service_available" required id="id_service_available">
+                    </div>
+                </div>
+                <input type="submit" value="Crear" class="form-btn-dark" />
+            </form>
+        </div>
+    </main>
+    <section class="section-flex">
+        <div class="link-flex">
+            <p>Para <b>visualizar</b> los servicios cargados, hacer click en: </p>
+            <button class="form-btn-dark"><a href="{% url 'GetServices' %}"> Mostrar</a></button>
+        </div>
+        <div>
+            <p>Para <b>actualizar</b> un servicio cargado, hacer click en: </p>
+            <button><a href="">Actualizar</a></button>
+        </div>
+        <div>
+            <p>Para <b>borrar</b> un servicio, hacer click en:</p>
+            <button><a href="">Borrar</a></button>
+        </div>
+    </section>
+    {% endblock %}

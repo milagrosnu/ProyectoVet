@@ -35,17 +35,17 @@ def CreateService(request):
                 service_available=data['service_available'],
             )
             service.save()
-            return render(request, 'AppVet/services_mgt.html')
+            return render(request, 'AppVet/services_create.html')
         else:
             redirect('services')
     e_form = ServicesForm()
-    return render(request, 'AppVet/services.html', {'form': e_form})
+    return render(request, 'AppVet/services_create.html', {'form': e_form})
 
 #Armar lista de servicios
 def GetServices(request):
     services = Services.objects.all()
     context = {'services' : services}
-    return render(request, 'AppVet/services_mgt.html', context)
+    return render(request, 'AppVet/services_show.html', context)
 
 #Actualizar servicio
 def UpdateService(request, id):

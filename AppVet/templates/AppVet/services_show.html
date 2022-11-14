@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'core.html' %}
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>Servicios</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <!-- muestro servicios cargados -->
+    <main>
+        <div class="show-detail">
+            <h2>Detalle de los servicios cargados</h2>
+        </div>
+        <div class="show-data">
+            {% for s in services%}
+            <ol class="show-ol">
+                <li class="show-p">
+                    <p><b>ID de servicio:</b> {{s.pk}}</p>
+                </li>
+                <li class="show-p">
+                    <p><b>Nombre del servicio:</b> {{s.service_name}}</p>
+                </li>
+                <li class="show-p">
+                    <p><b>Nombre del profesional a cargo:</b> {{s.service_prof}}</p>
+                </li>
+                <li class="show-p">
+                    <p><b>Servicio disponible?: </b> {{s.service_available}}</p>
+                    <br>
+                    <p><b>Si se muestra 'True', servicio disponible.</b></p>
+                    <p><b>Si se muestra 'False', servicio no disponible.</b></p>
+                </li>
+                <li class="show-p">
+                    <p><b>Agregado:</b> {{s.add_date}} </p>
+                </li>
+            </ol>
+            {% endfor %}
+        </div>
+    </main>
+    
+    <section class="section-flex">
+        <div class="link-flex">
+            <p>Para <b>crear</b> un servicio, hacer click en: </p>
+            <button class="form-btn-dark"><a href="{% url 'CreateService' %}"> Crear</a></button>
+        </div>
+        <div>
+            <p>Para <b>actualizar</b> un servicio cargado, hacer click en: </p>
+            <button><a href="">Actualizar</a></button>
+        </div>
+        <div>
+            <p>Para <b>borrar</b> un servicio, hacer click en:</p>
+            <button><a href="">Borrar</a></button>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+
+</html>
