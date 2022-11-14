@@ -35,22 +35,22 @@
                         <input type="checkbox" name="service_available" required id="id_service_available">
                     </div>
                 </div>
-                <input type="submit" value="Crear" class="form-btn-dark" />
+                <input type="submit" value="Crear" class="btn-dark" />
             </form>
         </div>
     </main>
     <section class="section-flex">
         <div class="link-flex">
             <p>Para <b>visualizar</b> los servicios cargados, hacer click en: </p>
-            <button class="form-btn-dark"><a href="{% url 'GetServices' %}"> Mostrar</a></button>
+            <button class="btn-light"><a href="{% url 'GetServices' %}"> Mostrar</a></button>
         </div>
         <div>
             <p>Para <b>actualizar</b> un servicio cargado, hacer click en: </p>
-            <button><a href="">Actualizar</a></button>
+            <button class="btn-light"><a href="">Actualizar</a></button>
         </div>
         <div>
             <p>Para <b>borrar</b> un servicio, hacer click en:</p>
-            <button><a href="">Borrar</a></button>
+            <button class="btn-light"><a href="">Borrar</a></button>
         </div>
     </section>
     {% endblock %}

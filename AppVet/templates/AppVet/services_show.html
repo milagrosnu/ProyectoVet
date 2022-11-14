@@ -47,9 +47,10 @@
     </main>
     
     <section class="section-flex">
+        {% if user.is_superuser %}
         <div class="link-flex">
             <p>Para <b>crear</b> un servicio, hacer click en: </p>
-            <button class="form-btn-dark"><a href="{% url 'CreateService' %}"> Crear</a></button>
+            <button class="btn-light"><a href="{% url 'CreateService' %}"> Crear</a></button>
         </div>
         <div>
             <p>Para <b>actualizar</b> un servicio cargado, hacer click en: </p>
@@ -59,6 +60,7 @@
             <p>Para <b>borrar</b> un servicio, hacer click en:</p>
             <button><a href="">Borrar</a></button>
         </div>
+        {% endif %}
     </section>
     {% endblock %}
 </body>
