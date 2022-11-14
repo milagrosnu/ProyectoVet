@@ -596,7 +596,7 @@ small-devices-and-up-media-quer
     font-family: var(--Font_Text);
 }
 
-.form-btn-dark {
+.form-btn{
     margin-bottom: 2vw;
     margin-left: 9vw;
 }
