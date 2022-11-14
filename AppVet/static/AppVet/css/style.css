@@ -82,19 +82,12 @@ small-devices-and-up-media-quer
     padding: 0.5vw 2vw;
 }
 
-.nav-btn,
-.main-btn-S,
-.booking-btn,
-.form-btn-dark {
+.btn-dark {
     background-color: var(--Color_Main);
 }
 
-.nav-btn,
-.main-btn-S,
-.main-btn-V,
-.booking-btn,
-.booking-btn1,
-.form-btn-dark {
+.btn-dark,
+.btn-light {
     border-radius: 20px;
     border: 1px solid var(--Color_Light);
 
@@ -109,33 +102,18 @@ small-devices-and-up-media-quer
     transition-property: box-shadow, transform;
 }
 
-.nav-btn:hover,
-.main-btn-V:hover,
-.main-btn-S:hover,
-.booking-btn:hover,
-.booking-btn1:hover,
-.form-btn-dark:hover,
-.nav-btn-V:focus,
-.main-btn-V:focus,
-.main-btn-S:focus,
-.booking-btn:focus,
-.booking-btn1:focus,
-.form-btn-dark:focus,
-.nav-btn:active,
-.main-btn-V:active,
-.main-btn-S:active,
-.booking-btn:active,
-.booking-btn1:active,
-.form-btn-dark:active {
+.btn-dark:hover,
+.btn-light:hover,
+.btn-dark:focus,
+.btn-light:focus,
+.btn-dark:active,
+.btn-light:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.nav-btn>a,
-.main-btn-S>a,
-.booking-btn>a,
-.form-btn-dark>a {
+.btn-dark>a {
     color: var(--Color_Light);
 
     font-family: var(--Font_Text);
@@ -225,9 +203,7 @@ small-devices-and-up-media-quer
     padding: 1vw 5vw 1vw 5vw;
 }
 
-.main-btn-V,
-.booking-btn1,
-.form-btn-light {
+.btn-light {
     background-color: var(--Color_Light);
 
     border: 1px solid var(--Color_Text);
@@ -236,9 +212,7 @@ small-devices-and-up-media-quer
     padding: 1vw 5vw 1vw 5vw;
 }
 
-.main-btn-V>a,
-.booking-btn1>a,
-.form-btn-light>a {
+.btn-light>a {
     color: var(--Color_Text);
 
     text-align: center;
@@ -459,7 +433,7 @@ small-devices-and-up-media-quer
 
 .service-box,
 .service-shadow:hover {
-    opacity: 1;
+    opacity: 3;
 }
 
 .service-box,
