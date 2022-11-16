@@ -69,7 +69,6 @@ small-devices-and-up-media-quer
     transition: 0.3s ease all;
 }
 
-
 .nav-item:hover::after {
     width: 100%;
     color: var(--Color_Main);
@@ -113,7 +112,8 @@ small-devices-and-up-media-quer
     transform: scale(1.1);
 }
 
-.btn-dark>a {
+.btn-dark>a, 
+.btn-dark {
     color: var(--Color_Light);
 
     font-family: var(--Font_Text);
@@ -611,11 +611,6 @@ small-devices-and-up-media-quer
 
 .section-flex {
     display: flex;
-}
-
-.link-flex {
-    display: flex;
-    flex-direction: row;
 }
 
 .link-flex>p{ 
