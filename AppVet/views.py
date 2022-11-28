@@ -62,14 +62,14 @@ def UpdateService(request, id):
     context = {'form': form}
     return render(request, 'services.html', context)
 
+#Borrar
 def DeleteService(request, id):
     service = Services.objects.get(id=id)
+    service.delete()
 
-    if request.method == 'POST':
-        service.delete()
-        return redirect('GetServices')
-    context = {'object': service}
-    return render(request, 'AppVet/services-mgt.html', context)
+    services = Services.objects.all()
+    context = {'services' : services}
+    return render(request, 'AppVet/services_show.html', context)
 
 #Productos
 def ShowProducts(request):

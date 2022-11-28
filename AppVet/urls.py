@@ -12,6 +12,8 @@ urlpatterns = [
     path('services/create-service', CreateService, name='CreateService'),
     #Detalle
     path('services/show-services', GetServices, name='GetServices'),
+    #Borrar
+    path('services/delete-service/<id>', DeleteService, name='DeleteService'),
 
     #path('services/show-services', GetServices, name='GetServices'),
     #path('services/<str:id>', GetService, name='GetService'),
