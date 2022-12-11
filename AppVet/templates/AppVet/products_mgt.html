@@ -15,65 +15,39 @@
 
 <body>
     {% block content %}
-    <!-- muestro servicios cargados -->
-    <main>
-        <div class="service-detail">
-            <h2>Detalle de los productos cargados</h2>
-        </div>
-        <div class="service-data">
-            {% for service in services%}
-            <ol>
-                <li>
-                    <p>ID del producto: {{service.pk}}</p>
-                </li>
-                <li>
-                    <p>Nombre del producto: {{service.service_name}}</p>
-                </li>
-                <li>
-                    <p>Stock disponible: {{service.service_prof}}</p>
-                </li>
-                <li>
-                    <p>Imagen del producto:{{service.service_day}}</p>
-                </li>
-                <li>
-                    <p>Agregado: {{service.add_date}} </p>
-                </li>
-                <li>
-                    <p>Modificado: {{service.last_update}}</p>
-                </li>
-            </ol>
-            {% endfor %}
-        </div>
-    </main>
     <!-- una vez logueado con admin, crea, actualiza o elimina servicio con form -->
     <section class="section-bg">
         <div class="service-detail">
-            <h2>Crear producto</h2>
+            <h2>Cargar producto nuevo</h2>
         </div>
         <div class="service-form">
             <!-- para crear un servicio y cargar en bbdd -->
             <form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
                 <div class="service-input">
                     <div class="service-field">
-                        <label for="id_service_name"> Nombre del servicio: </label>
-                        <input type="text" name="service_name" maxlength="50" required id="id_service_name">
+                        <label for="id_prod_name"> Nombre del producto: </label>
+                        <input type="text" name="prod_name" maxlength="50" required id="id_prod_name">
                     </div>
                     <div class="service-field">
-                        <label for="id_service_prof"> Nombre del profesional a cargo: </label>
-                        <input type="text" name="service_prof" maxlength="50" required id="id_service_prof">
+                        <label for="id_prod_stock"> Cantidad de Stock: </label>
+                        <input type="number" name="prod_stock" required id="id_prod_stock">
                     </div>
                     <div class="service-field">
-                        <label for="id_service_available">Se encuentra disponible el servicio? </label>
-                        <input type="boolean" name="service_available" required id="id_service_available">
+                        <label for="id_prod_price">Precio del producto: </label>
+                        <input type="number" name="prod_price" required id="id_prod_price">
+                    </div>
+                    <div class="service-field">
+                        <label for="id_prod_img">Imagen del producto: </label>
+                        <input type="image" name="prod_img" required id="id_prod_img">
                     </div>
                 </div>
-                <input type="submit" value="Crear" class="form-btn-dark" />
+                <input type="submit" value="Cargar" class="form-btn-dark" />
             </form>
         </div>
     </section>
     <section>
         <div class="service-detail">
-            <h2>Borrar servicio</h2>
+            <h2>Borrar producto</h2>
         </div>
         <div>
             <!-- para borrar un servicio en bbdd -->
@@ -81,7 +55,7 @@
     </section>
     <section class="section-bg">
         <div class="service-detail">
-            <h2>Actualizar servicio</h2>
+            <h2>Actualizar producto</h2>
         </div>
         <div>
             <!-- para actualizar un servicio y cargar en bbdd -->

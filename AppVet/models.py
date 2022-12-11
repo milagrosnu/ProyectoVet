@@ -41,4 +41,4 @@ class Product(models.Model):
     class Meta:
         ordering = ['-prod_id']
     def __str__(self):
-        return f'El {self.prod_name} se encuentra {self.prod_stock}'
+        return f'El {self.prod_name} tiene cantidad de: {self.prod_stock}'

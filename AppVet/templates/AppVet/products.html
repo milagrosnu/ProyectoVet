@@ -13,7 +13,37 @@
 </head>
 <body>
 {% block content %}
-
+<main>
+    <div class="service-detail">
+        <h2>Detalle de los productos cargados</h2>
+    </div>
+    <div class="service-data">
+        {% for p in services%}
+        <ol>
+            {% if user.is_superuser %}
+            <li>
+                <p>ID del producto: {{p.pk}}</p>
+            </li>
+            <li>
+                <p>Stock disponible: {{p.product_stock}}</p>
+            </li>
+            <li>
+                <p>Agregado: {{p.add_date}} </p>
+            </li>
+            {% endif %}
+            <li>
+                <p>Imagen del producto:{{p.product_img}}</p>
+            </li>
+            <li>
+                <p>Nombre del producto: {{p.product_name}}</p>
+            </li>
+            <li>
+                <p>Precio del producto:{{p.product_price}}</p>
+            </li>
+        </ol>
+        {% endfor %}
+    </div>
+</main>
 
 {% endblock %}
 </body>

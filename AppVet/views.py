@@ -13,16 +13,6 @@ def index(request):
 def ShowServices(request):
     return render(request, 'AppVet/services.html')
 
-#Traer servicios cargados ddbb
-""" def GetServices(request):
-    return render(request, 'AppVet/services_mgt.html')
- """
-""" def GetService(request, id):
-    service = None
-    service = Services.objects.GET(id=id)
-    context = {'service': service}
-    return render(request, 'AppVet/services_mgt.html', context)
- """
 #Crear servicio
 def CreateService(request):
     if request.method == 'POST':
@@ -74,6 +64,30 @@ def DeleteService(request, id):
 #Productos
 def ShowProducts(request):
     return render(request, 'AppVet/products.html')
+
+def CreateProduct(request):
+    if request.method == 'POST':
+        p_form = ServicesForm(request.POST)
+        if p_form.is_valid():
+            data = p_form.cleaned_data
+            product = Product(
+                prod_name = data['prod_name'],
+                prod_stock = data['prod_stock'],
+                prod_img = data['prod_img'],
+                prod_price = data['prod_price'],
+            )
+            product.save()
+            return render(request, 'AppVet/products.html')
+        else:
+            redirect('products')
+    e_form = ProductForm()
+    return render(request, 'AppVet/products.html', {'form': e_form})
+
+#Armar lista de productos
+def GetProducts(request):
+    products = Product.objects.all()
+    context = {'products' : products}
+    return render(request, 'AppVet/products.html', context)
 
 #Reservas
 def ShowBookings(request):

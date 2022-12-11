@@ -77,7 +77,7 @@ small-devices-and-up-media-quer
 }
 
 /* nav-login-btn */
-.nav-btn {
+.nav-btn, .form-btn, input {
     padding: 0.5vw 2vw;
 }
 
@@ -112,8 +112,8 @@ small-devices-and-up-media-quer
     transform: scale(1.1);
 }
 
-.btn-dark>a, 
-.btn-dark {
+.btn-dark>a,
+.form-btn {
     color: var(--Color_Light);
 
     font-family: var(--Font_Text);
@@ -601,7 +601,7 @@ small-devices-and-up-media-quer
     margin-left: 9vw;
 }
 
-.show-ol {
+.show-ol, .link-flex {
     border: solid 1px var(--Color_Text);
     border-radius: 20px;
    

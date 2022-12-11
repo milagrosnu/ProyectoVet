@@ -44,13 +44,15 @@
             <p>Para <b>visualizar</b> los servicios cargados, hacer click en: </p>
             <button class="btn-light"><a href="{% url 'GetServices' %}"> Mostrar</a></button>
         </div>
-        <div>
+        {% if user.is_superuser %}
+        <div class="link-flex">
             <p>Para <b>actualizar</b> un servicio cargado, hacer click en: </p>
             <button class="btn-light"><a href="">Actualizar</a></button>
         </div>
-        <div>
-            <p>Para <b>borrar</b> un servicio, hacer click en:</p>
+        <div class="link-flex">
+            <p>Para <b>borrar</b> un servicio, indicar el numero de ID en url.<br>Por ejemplo: <b>/delete-services/1:</b></p>
             <button class="btn-light"><a href="">Borrar</a></button>
         </div>
+        {% endif %}
     </section>
     {% endblock %}

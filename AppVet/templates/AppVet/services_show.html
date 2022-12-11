@@ -52,13 +52,13 @@
             <p>Para <b>crear</b> un servicio, hacer click en: </p>
             <button class="btn-light"><a href="{% url 'CreateService' %}"> Crear</a></button>
         </div>
-        <div>
+        <div class="link-flex">
             <p>Para <b>actualizar</b> un servicio cargado, hacer click en: </p>
             <button class="btn-light"><a href="">Actualizar</a></button>
         </div>
-        <div>
+        <div class="link-flex">
             <p>Para <b>borrar</b> un servicio, indicar el numero de ID en url.<br>Por ejemplo: <b>/delete-services/1:</b></p>
-            <button class="btn-light"><a href="">Borrar</a></button>
+            <button class="btn-light"><a href="{% url  %}">Borrar</a></button>
         </div>
         {% endif %}
     </section>
